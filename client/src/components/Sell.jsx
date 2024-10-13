@@ -3,12 +3,15 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import NavbarBar from './Navbar';
 
 
 
 function Sell(){
 
     return (
+    <>
+    <NavbarBar/>
     <div className="auth-wrapper">
     <div className="auth-inner sell">
     <Container fluid>
@@ -45,6 +48,7 @@ function Sell(){
     </Container>
       </div>
       </div>
+      </>
     );
 
 }
