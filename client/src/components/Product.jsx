@@ -38,7 +38,7 @@ function Product(props){
 
   function doSubmit(){
     console.log("submitted");
-    if(data.bid<(props.price+1)){
+    if(data.bid<props.price){
       setAlert(true);
     }
     else{
@@ -73,11 +73,11 @@ function Product(props){
         <Toast.Header>
           <strong className="me-auto">Error</strong>
         </Toast.Header>
-        <Toast.Body>Min bid price is {props.price+1}</Toast.Body>
+        <Toast.Body>Min bid price is {props.price}</Toast.Body>
       </Toast>
     
         <form >
-            <input type="Number" name = "bid"  placeholder={props.price+1} min={props.price+1} required onChange={handleChange}></input>
+            <input type="Number" name = "bid"  placeholder={props.price} min={props.price} required onChange={handleChange}></input>
         </form>
         </Modal.Body>
         <Modal.Footer>
@@ -100,7 +100,7 @@ function Product(props){
                 <p>{props.description}</p>
             </Row>
             <Row className="product-btn">
-                <span> <Button variant="primary" className="bid" onClick={handleShow} disabled={disable}>Current Bid: {props.price}</Button> 
+                <span> <Button variant="primary" className="bid" onClick={handleShow} disabled={disable}>{props.price}</Button> 
                 <Button variant="warning" className="timer"><Countdown date={Date.now()+86400000}/></Button>
                 </span>
             </Row>

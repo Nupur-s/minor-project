@@ -118,7 +118,7 @@ function Bids(props){
         <Col>
         <Card.Title>{props.prodName}</Card.Title>
         <Card.Text>
-            My Bid: {props.bidVal}
+            Bid: {props.bidVal}
             <br></br>
             <Button className="bid-btn" variant="warning" onClick={handleShow}>Update bid</Button>
             <Button className ="bid-btn" href ="/bids" variant="danger" onClick={handleDelete}>Delete bid</Button>

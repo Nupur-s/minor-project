@@ -33,7 +33,7 @@ function Sell(){
         </div>
         <div className="mb-3">
           <label>Upload photo</label>
-          <input type="file"  name = "photo" id ="photo" accept=".png,.jpeg,.jpg" className="form-control" alt="Image" required />
+          <input type="file"  name = "photo" id ="photo" accept="image/*" className="form-control" alt="Image" required />
         </div>
         <div className="d-grid sell-btn">
         <span>
